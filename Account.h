@@ -147,6 +147,7 @@ class Savings_Account :public Account
 private:
 	string account_type = "Savings Account";
 public:
+Savings_Account(Customer *cust, int id) : customer(cust), account_number(id), balance(0) {}
 	string get_accounttype()
 	{
 		return account_type;
@@ -161,6 +162,7 @@ class Checking_Account :public Account
 private:
 	string account_type = "Checking Account";
 public:
+Checking_Account(Customer *cust, int id) : customer(cust), account_number(id), balance(0) {}
 	string get_accounttype()
 	{
 		return account_type;
