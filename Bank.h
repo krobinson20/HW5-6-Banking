@@ -70,7 +70,16 @@ private:
 		Account *acct = NULL;
 
 		// FIXME: Factory method for creating a Account object (could be a Saving_Account or a Checking_Account).
-		
+		if (account_type == "savings")
+		{
+			acct = new Savings_Account();
+		}
+		else if(account_type == "checking")
+		{
+			acct = new Checking_Account();
+		}
+		return acct;
+	}
 		return acct;
 	}
 
